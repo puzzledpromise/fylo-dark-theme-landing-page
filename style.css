@@ -1,0 +1,152 @@
+:root{
+    --clr-primary-1: hsl(217,28%,15%); /* intro and email sign up */
+    --clr-primary-2: hsl(218, 28%, 13%); /* main background */
+    --clr-primary-3: hsl(216, 53%, 9%); /* footer background */
+    --clr-primary-4: hsl(219, 30%, 18%); /* testimonials background */
+
+    --clr-accent-1: hsl(176,68%, 64%);
+    --clr-accent-2: hsl(198, 60%, 50%);
+    --clr-accent-3: hsl(0, 100%,63%);
+
+    --clr-neutral: hsl(0, 0%, 100%);
+
+    --fts-normal: 14px;
+
+    --ftf-headings: 'Raleway', sans-serif;
+    --ftf-body: 'Open Sans', sans-serif;
+
+    --spacer: 1rem;
+    --flow-space: 3rem;
+
+}
+
+/* reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul[class],
+ol[class]{
+    list-style: none;
+    padding: 0;
+}
+
+/* Utility classes */
+.flow-content > * + * {
+    margin-top: var(--flow-space, var(--spacer));
+}
+
+
+
+.container {
+    padding: 0 var(--spacer);
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer);
+}
+
+.ta-center{
+    text-align: center;
+}
+/* components */
+
+body{
+    font-family: var(--ftf-body);
+    font-size: var(--fts-normal);
+    background-color: var(--clr-primary-2);
+    color: var(--clr-neutral);
+    padding: 2rem 1.25rem;
+    line-height: 1.5rem;
+}
+
+h1{
+    font-family: var(--ftf-headings);
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+
+h2{
+    font-family: var(--ftf-headings);
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.logo{
+    height: 1.5rem;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section{
+    margin-top: 5rem;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+
+section.intro{
+    max-width: 33.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+    --flow-space: 1rem;
+}
+
+section.productive{
+    --flow-space: 1rem;
+    gap: 1rem;
+}
+
+.btn{
+    background: linear-gradient(var(--clr-accent-1), var(--clr-accent-2));
+    border-radius: 9999rem;
+    color: var(--clr-neutral);
+    padding: 1em 5em;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.bullet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.bullet img{
+   width: 5rem;
+}
