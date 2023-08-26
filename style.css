@@ -3,6 +3,7 @@
     --clr-primary-2: hsl(218, 28%, 13%); /* main background */
     --clr-primary-3: hsl(216, 53%, 9%); /* footer background */
     --clr-primary-4: hsl(219, 30%, 18%); /* testimonials background */
+    --clr-primary-5: #6F6E6E;
 
     --clr-accent-1: hsl(176,68%, 64%);
     --clr-accent-2: hsl(198, 60%, 50%);
@@ -32,6 +33,7 @@ h1,
 h2,
 h3,
 p {
+    padding: 0;
     margin: 0;
 }
 
@@ -56,8 +58,8 @@ ol[class]{
 
 .container {
     padding: 0 var(--spacer);
-    max-width: 70rem;
-    margin: 0 auto;
+    max-width: 31.25rem;
+    margin-inline: auto;
 }
 
 .split {
@@ -69,7 +71,12 @@ ol[class]{
 .ta-center{
     text-align: center;
 }
-/* components */
+
+.ta-left{
+    text-align: left;
+}
+
+/* general classes */
 
 body{
     font-family: var(--ftf-body);
@@ -80,6 +87,14 @@ body{
     line-height: 1.5rem;
 }
 
+a{
+   text-decoration: none;
+    color: var(--clr-neutral);
+}
+
+a:hover{
+    font-weight: 700;
+}
 h1{
     font-family: var(--ftf-headings);
     font-size: 1.5rem;
@@ -88,10 +103,10 @@ h1{
 }
 
 h2{
+    text-align: center;
     font-family: var(--ftf-headings);
     font-size: 1.125rem;
     font-weight: 700;
-    text-align: center;
 }
 
 .logo{
@@ -125,9 +140,8 @@ section.intro{
     --flow-space: 1rem;
 }
 
-section.productive{
-    --flow-space: 1rem;
-    gap: 1rem;
+section.productive img{
+    margin-bottom: 3rem;
 }
 
 .btn{
@@ -140,6 +154,15 @@ section.productive{
     cursor: pointer;
 }
 
+.signup{
+    border: none;
+    height: 2rem;
+    border-radius: 9999rem;
+    color: var(--clr-primary-5);
+    padding-left: 1em;
+    height: 2.75rem;
+}
+
 .bullet{
     display: flex;
     flex-direction: column;
@@ -149,4 +172,121 @@ section.productive{
 
 .bullet img{
    width: 5rem;
+}
+
+
+a.works-link:after{
+    content: '';
+    display: inline-block;
+    margin-left: 0.5em;
+    width: 1rem;
+    height: 1rem;
+    background-image: url('./images/icon-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0.25em;
+
+}
+a.works-link{
+    display: inline-block;
+    border-bottom: 1px solid var(--clr-accent-1);
+    text-decoration: none;
+    color: var(--clr-accent-1);
+    font-size: 0.75rem;
+}
+
+.productive h2{
+    text-align: left;
+}
+
+
+.quotes{
+    display: inline-block;
+    width: 1.5rem;
+    margin-left: 0.2rem;
+    margin-bottom: -1.15rem;
+}
+.testimonial{
+
+    background-color: var(--clr-primary-4);
+    font-size: 0.75rem;
+    padding: 1.5rem 1.5rem;
+    border-radius: 6px;
+    line-height: 1.5;
+}
+
+
+
+.testimonial__profile{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.testimonial__avatar{
+    border-radius: 100%;
+    height: 2rem;
+
+}
+
+.testimonial__name{
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.testimonial__title{
+    font-size: 0.7rem;
+}
+
+.early-access{
+    --spacer: 1.5rem;
+    background-color: var(--clr-primary-1);
+    padding: 2.5rem 1rem;
+    border-radius: 9px;
+}
+
+
+footer{
+    padding: 3rem 1rem;
+}
+
+.footer--entry{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer--image{
+    width: 1rem;
+    flex-basis: 10%;
+}
+
+.footer--text{
+    flex-basis: 90%;
+}
+
+footer a{
+    font-size: 1rem;
+}
+
+footer li{
+    line-height: 2.0    ;
+}
+
+footer .footer--nav{
+    gap: 0rem;
+}
+
+footer .social{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer .social a i:hover{
+    color: var(--clr-accent-1);
 }
